@@ -1,5 +1,4 @@
 import { create } from "axios";
-import config from "config";
 
 const createClient = (baseURL, contentType) =>
   create({
@@ -13,7 +12,7 @@ const createClient = (baseURL, contentType) =>
 
 const clients = {
   default: {
-    client: createClient(config.apiUrl, "application/json"),
+    client: createClient("/api", "application/json"),
   },
   // ,
   // multiPartFormData: {

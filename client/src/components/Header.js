@@ -52,7 +52,10 @@ export default function Header(props) {
         </div>
       </div>
       <div className={`collapse navbar-collapse`} id="navbarSupportedContent">
-        <ul className="navbar-nav" style={{ marginRight: "40px" }}>
+        <ul
+          className="navbar-nav"
+          style={{ marginRight: "40px", flexDirection: "column" }}
+        >
           <li className="nav-item "></li>
           <li className="nav-item ">
             <NavLink to="/home">Home</NavLink>

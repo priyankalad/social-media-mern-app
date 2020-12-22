@@ -1,0 +1,8 @@
+{
+  "MONGO_URL": "mongodb+srv://social123:mongo123@cluster0-9i3qo.mongodb.net/dbSocialMedia?retryWrites=true&w=majority",
+  "JWT_SECRET": " ",
+  "S3_ACCESS_KEY": "AKIAUK3ZSDABI6GJJJEN",
+  "S3_SECRET_ACCESS_KEY": "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",
+  "S3_BUCKET_NAME": "social-media-mern-bucket",
+  "ENABLE_EMAIL": "true"
+}

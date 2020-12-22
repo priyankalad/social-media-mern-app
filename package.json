@@ -5,19 +5,34 @@
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node app.js",
+    "server": "nodemon app.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "author": "Brad Traversy",
-  "license": "MIT",
+  "author": "Priyanka Lad",
   "devDependencies": {
+    "aws-sdk": "^2.815.0",
     "nodemon": "^1.14.6"
   },
   "dependencies": {
     "concurrently": "^3.5.1",
     "cors": "^2.8.5",
-    "express": "^4.16.2"
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.7",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "nodemailer": "^6.4.2",
+    "randomstring": "^1.1.5",
+    "validatorjs": "^3.18.1"
   }
 }
