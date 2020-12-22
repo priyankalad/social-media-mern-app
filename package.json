@@ -13,10 +13,10 @@
   },
   "author": "Priyanka Lad",
   "devDependencies": {
-    "aws-sdk": "^2.815.0",
     "nodemon": "^1.14.6"
   },
   "dependencies": {
+    "aws-sdk": "^2.815.0",
     "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
     "concurrently": "^3.5.1",
