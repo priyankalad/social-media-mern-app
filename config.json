@@ -1,8 +1,0 @@
-{
-  "MONGO_URL": "<your mongodb connection url>",
-  "JWT_SECRET": " ",
-  "S3_ACCESS_KEY": "<s3 access key>",
-  "S3_SECRET_ACCESS_KEY": "<s3 secret access key>",
-  "S3_BUCKET_NAME": "<s3 bucket name>",
-  "ENABLE_EMAIL": "true"
-}
