@@ -12,7 +12,7 @@ var {
   getFollowingController,
   getPostsController,
   getUsersToFollowController,
-  getUserProfileByIdController
+  getUserProfileByIdController,
 } = require("../controllers/users");
 var { validateRequest, validationRules, saveImage } = require("../utils/index");
 var { userProfileRules } = validationRules;
