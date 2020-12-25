@@ -23,14 +23,14 @@ var cookieParser = require("cookie-parser");
 var multer = require("multer");
 var logger = require("morgan");
 var cors = require("cors");
-var { connect } = require("../server/db/db_connection");
 require("dotenv").config();
+var { connect } = require("./db/db_connection");
 
 //let fileUpload = require("express-fileupload");
 
-var indexRouter = require("../server/routes/index");
-var usersRouter = require("../server/routes/users");
-var postRouter = require("../server/routes/posts");
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
+var postRouter = require("./routes/posts");
 
 var app = express();
 connect().then((err) => {
@@ -66,11 +66,9 @@ function errorHandler(err, req, res, next) {
     message: "Something went wrong. Please contact administrator",
   });
 }
-console.log("process.env.NODE_ENV: " + process.env.NODE_ENV);
+console.log("in app.js....." + process.env.NODE_ENV);
 if (process.env.NODE_ENV === "production") {
-  console.log(path.resolve(__dirname, "..", "client", "build"));
-  app.use(express.static(path.resolve(__dirname, "..", "client", "build")));
-
+  app.use(express.static(path.resolve(__dirname, "../client/build")));
   app.get("*", (req, res) => {
     res.sendFile(
       path.resolve(__dirname, "..", "client", "build", "index.html")
