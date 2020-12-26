@@ -24,13 +24,13 @@ var multer = require("multer");
 var logger = require("morgan");
 var cors = require("cors");
 require("dotenv").config();
-var { connect } = require("./db/db_connection");
+var { connect } = require("../server/db/db_connection");
 
 //let fileUpload = require("express-fileupload");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var postRouter = require("./routes/posts");
+var indexRouter = require("../server/routes/index");
+var usersRouter = require("../server/routes/users");
+var postRouter = require("../server/routes/posts");
 
 var app = express();
 connect().then((err) => {

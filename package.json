@@ -4,22 +4,20 @@
   "description": "Starter kit for creating React and Express apps",
   "main": "server.js",
   "scripts": {
-    "client-install": "cd client && npm install",
-    "start": "cd server && node app.js",
-    "server": "cd server && nodemon app.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "start": "node server/app.js",
+    "server": "nodemon server/app.js",
+    "dev": "concurrently \"npm run server\""
   },
-  "author": "Priyanka Lad",
+  "author": "Brad Traversy",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.14.6"
   },
   "dependencies": {
+    "concurrently": "^3.5.1",
     "aws-sdk": "^2.815.0",
     "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
-    "concurrently": "^3.5.1",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
